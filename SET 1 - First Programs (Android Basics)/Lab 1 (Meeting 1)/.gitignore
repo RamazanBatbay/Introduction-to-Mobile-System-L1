@@ -14,5 +14,10 @@
 .cxx
 local.properties
 
-# App module
+# App module build
 /app/build
+/app/release
+/app/debug
+/app/tmp
+
+!*.apk
