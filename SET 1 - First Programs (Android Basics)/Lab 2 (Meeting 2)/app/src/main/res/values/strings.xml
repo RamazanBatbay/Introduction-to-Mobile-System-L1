@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Introduce Yourself</string>
+    <string name="witaj_button_text">Witaj</string>
+    <string name="prompt_text">Przedstaw się.</string>
+</resources>
