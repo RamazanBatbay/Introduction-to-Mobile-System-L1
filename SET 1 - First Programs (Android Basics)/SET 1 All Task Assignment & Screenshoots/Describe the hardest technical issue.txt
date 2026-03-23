@@ -1,0 +1,4 @@
+- Describe the hardest technical issue you faced and how you solved it.
+Android studio kinda similar to intelij IDEA but it was difficult to run the application and open the phone and for slove this i checked to the youtube and watch some short quick guides
+
+First thing was creating apk files and i checked some forums and researched and to be hones i also asked to google gemini to get some information
