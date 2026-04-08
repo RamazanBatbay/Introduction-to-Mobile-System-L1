@@ -1,0 +1,4 @@
+- Describe the hardest technical issue you faced and how you solved it.
+
+The hardest technical issue was synchronization between the Lamp and Bulb classes, especially the bulb is burning when reach the maximum intensity. I solved this by tightly encapsulating the state and constraint checks inside the Lamps interaction methods. This way, every time the state changes, it automatically and correctly updates the internal bulb instance, just as the requirements specify.
+
