@@ -1,7 +1,7 @@
 # Lab 4: Lamp Application
 
 * **Course name:** Introduction to Mobile System L1
-* **Lab number:** L4-L5
+* **Lab number:** Lab4-5
 * **Student name:** Ramazan Batbay
 * **Student ID:** 54813
 
