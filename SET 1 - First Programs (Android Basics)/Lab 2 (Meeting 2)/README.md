@@ -1,7 +1,7 @@
 # Lab 2: Introduce Yourself
 
-* **Course name:** Introduction to Mobile System
-* **Lab number:** L2
+* **Course name:** Introduction to Mobile System L1
+* **Lab number:** Lab2
 * **Student name:** Ramazan Batbay
 * **Student ID:** 54813
 
