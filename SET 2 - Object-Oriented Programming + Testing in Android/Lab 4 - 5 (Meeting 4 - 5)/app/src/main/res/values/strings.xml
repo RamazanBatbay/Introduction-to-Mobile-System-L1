@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Lamp App</string>
+    <string name="lamp_intensity">Intensity: %d</string>
+    <string name="lamp_status_on">Lamp is ON</string>
+    <string name="lamp_status_off">Lamp is OFF</string>
+    <string name="bulb_status_burned">Bulb is BURNED</string>
+    <string name="bulb_status_ok">Bulb is OK</string>
+    
+    <string name="btn_turn_on">Turn On</string>
+    <string name="btn_turn_off">Turn Off</string>
+    <string name="btn_brighten">Brighten</string>
+    <string name="btn_dim">Dim</string>
+    <string name="btn_replace">Replace Bulb</string>
+</resources>
