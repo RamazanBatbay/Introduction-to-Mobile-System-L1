@@ -1,0 +1,3 @@
+- Describe the hardest technical issue you faced and how you solved it.
+
+The hardest technical issue was managing the calculator's internal state to correctly process sequential arithmetic operations alongside dynamic number base conversions. I solved this by structuring a robust state management approach that carefully tracks the current operand, previous operand, and pending operator, ensuring calculations and UI updates occur flawlessly without losing precision or crashing on edge cases like division by zero.
