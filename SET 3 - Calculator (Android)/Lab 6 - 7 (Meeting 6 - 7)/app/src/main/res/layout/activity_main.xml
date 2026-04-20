@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom|end"
+        android:textSize="48sp"
+        android:textColor="#000000"
+        android:text=""
+        android:layout_marginBottom="16dp" />
+
+    <!-- Extra buttons for BONUS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnBin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/btn_base"
+            app:backgroundTint="@null"
+            android:text="BIN" />
+
+        <Button
+            android:id="@+id/btnOct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/btn_base"
+            app:backgroundTint="@null"
+            android:text="OCT" />
+            
+        <Button
+            android:id="@+id/btnHex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/btn_base"
+            app:backgroundTint="@null"
+            android:text="HEX" />
+
+        <Button
+            android:id="@+id/btnHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/btn_base"
+            app:backgroundTint="@null"
+            android:text="HIST" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5">
+
+        <!-- Row 1 -->
+        <Button android:text="AC" android:id="@+id/btnAC" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_action" app:backgroundTint="@null" />
+        <Button android:text="CE" android:id="@+id/btnCE" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_action" app:backgroundTint="@null" />
+        <Button android:text="num" android:id="@+id/btnNum" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_action" app:backgroundTint="@null" />
+        <Button android:text="/" android:id="@+id/btnDiv" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_operator" app:backgroundTint="@null" />
+
+        <!-- Row 2 -->
+        <Button android:text="7" android:id="@+id/btn7" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_number" app:backgroundTint="@null" />
+        <Button android:text="8" android:id="@+id/btn8" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_number" app:backgroundTint="@null" />
+        <Button android:text="9" android:id="@+id/btn9" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_number" app:backgroundTint="@null" />
+        <Button android:text="*" android:id="@+id/btnMul" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_operator" app:backgroundTint="@null" />
+
+        <!-- Row 3 -->
+        <Button android:text="4" android:id="@+id/btn4" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_number" app:backgroundTint="@null" />
+        <Button android:text="5" android:id="@+id/btn5" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_number" app:backgroundTint="@null" />
+        <Button android:text="6" android:id="@+id/btn6" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_number" app:backgroundTint="@null" />
+        <Button android:text="-" android:id="@+id/btnSub" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_operator" app:backgroundTint="@null" />
+
+        <!-- Row 4 -->
+        <Button android:text="1" android:id="@+id/btn1" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_number" app:backgroundTint="@null" />
+        <Button android:text="2" android:id="@+id/btn2" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_number" app:backgroundTint="@null" />
+        <Button android:text="3" android:id="@+id/btn3" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_number" app:backgroundTint="@null" />
+        <Button android:text="+" android:id="@+id/btnAdd" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_operator" app:backgroundTint="@null" />
+
+        <!-- Row 5 -->
+        <Button android:text="0" android:id="@+id/btn0" android:layout_columnSpan="3" android:layout_columnWeight="3" android:layout_gravity="fill_horizontal" android:layout_margin="2dp" android:background="@drawable/btn_number" app:backgroundTint="@null" />
+        <Button android:text="=" android:id="@+id/btnEquals" android:layout_columnWeight="1" android:layout_margin="2dp" android:background="@drawable/btn_operator" app:backgroundTint="@null" />
+
+    </GridLayout>
+</LinearLayout>
