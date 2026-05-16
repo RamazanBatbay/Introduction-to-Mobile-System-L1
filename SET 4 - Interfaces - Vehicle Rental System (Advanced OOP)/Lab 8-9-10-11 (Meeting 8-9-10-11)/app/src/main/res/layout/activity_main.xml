@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vehicle Rental System"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnAddVehicle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Add Vehicle"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:id="@+id/btnRemoveVehicle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Remove Vehicle"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:id="@+id/btnParkVehicle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Park Vehicle"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Refresh List"
+            android:layout_margin="4dp"/>
+    </GridLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Output Console:"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#EEEEEE"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvConsole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="System Initialized..."
+            android:textSize="14sp"
+            android:fontFamily="monospace"/>
+
+    </ScrollView>
+</LinearLayout>
