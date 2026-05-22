@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Maze Explorer</string>
+    <string name="start_title">MAZE EXPLORER</string>
+    <string name="start_subtitle">An Interactive Bitmask Puzzle</string>
+    <string name="start_desc">Challenge your spatial awareness. Navigate through rooms using bitmask-encoded doors. Reach cell (1, 2) to escape!</string>
+    <string name="btn_start">START EXPLORATION</string>
+    
+    <!-- Game Navigation -->
+    <string name="btn_up">UP ▴</string>
+    <string name="btn_down">DOWN ▾</string>
+    <string name="btn_left">◂ LEFT</string>
+    <string name="btn_right">RIGHT ▸</string>
+    
+    <string name="room_coordinates">Coordinates: Row %1$d, Column %2$d</string>
+    <string name="room_value_debug">Room Mask: %1$d (Binary: %2$s)</string>
+    
+    <!-- Result Screen -->
+    <string name="win_title">ESCAPE SUCCESSFUL</string>
+    <string name="win_message">Congratulations! You successfully reached the end room and solved the maze puzzle!</string>
+    <string name="btn_restart">PLAY AGAIN / RESTART</string>
+    <string name="btn_menu">BACK TO MAIN MENU</string>
+</resources>

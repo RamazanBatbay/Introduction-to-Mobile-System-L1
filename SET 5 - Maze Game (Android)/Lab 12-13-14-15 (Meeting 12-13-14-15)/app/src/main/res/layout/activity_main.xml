@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.tools.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <!-- ================= START SCREEN ================= -->
+    <LinearLayout
+        android:id="@+id/layout_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_title"
+            android:textColor="@color/accent_green"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/start_subtitle"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:gravity="center" />
+
+        <!-- Instructions Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOW TO PLAY"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/start_desc"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="#334155" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Door Bitmasks:"
+                android:textColor="@color/accent_green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="• LEFT Door: 1\n• RIGHT Door: 2\n• UP Door: 4\n• DOWN Door: 8\n• START Marker: 16"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:lineSpacingExtra="3dp" />
+        </LinearLayout>
+
+        <android.widget.Button
+            android:id="@+id/btn_start_game"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/button_available"
+            android:text="@string/btn_start"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:elevation="4dp" />
+    </LinearLayout>
+
+    <!-- ================= GAME PLAY SCREEN ================= -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_game"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Navigation Buttons placed at edges -->
+        <android.widget.Button
+            android:id="@+id/btn_nav_up"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_available"
+            android:text="@string/btn_up"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <android.widget.Button
+            android:id="@+id/btn_nav_down"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_available"
+            android:text="@string/btn_down"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="16dp" />
+
+        <android.widget.Button
+            android:id="@+id/btn_nav_left"
+            android:layout_width="64dp"
+            android:layout_height="120dp"
+            android:background="@drawable/button_available"
+            android:text="@string/btn_left"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:padding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp" />
+
+        <android.widget.Button
+            android:id="@+id/btn_nav_right"
+            android:layout_width="64dp"
+            android:layout_height="120dp"
+            android:background="@drawable/button_available"
+            android:text="@string/btn_right"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:padding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Center Card representing Room Status -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_nav_down"
+            app:layout_constraintEnd_toStartOf="@id/btn_nav_right"
+            app:layout_constraintStart_toEndOf="@id/btn_nav_left"
+            app:layout_constraintTop_toBottomOf="@id/btn_nav_up">
+
+            <!-- Title: Current Room -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CURRENT ROOM"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1" />
+
+            <!-- Coordinates text -->
+            <TextView
+                android:id="@+id/text_coordinates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Coordinates: Row X, Col Y"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Visual representation of doors (3x3 door representation layout) -->
+            <GridLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:columnCount="3"
+                android:rowCount="3"
+                android:background="#2C3E50"
+                android:padding="8dp">
+
+                <!-- Row 0: Corners and Up Door -->
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@color/disabled_gray" />
+                <TextView
+                    android:id="@+id/door_up_indicator"
+                    android:layout_width="40dp"
+                    android:layout_height="32dp"
+                    android:background="@color/accent_green"
+                    android:text="U"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@color/disabled_gray" />
+
+                <!-- Row 1: Left Door, Center Player, Right Door -->
+                <TextView
+                    android:id="@+id/door_left_indicator"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:background="@color/accent_green"
+                    android:text="L"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/accent_blue"
+                    android:text="웃"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/door_right_indicator"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:background="@color/accent_green"
+                    android:text="R"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+
+                <!-- Row 2: Corners and Down Door -->
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@color/disabled_gray" />
+                <TextView
+                    android:id="@+id/door_down_indicator"
+                    android:layout_width="40dp"
+                    android:layout_height="32dp"
+                    android:background="@color/accent_green"
+                    android:text="D"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@color/disabled_gray" />
+            </GridLayout>
+
+            <!-- Debug value -->
+            <TextView
+                android:id="@+id/text_debug_mask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room Mask: XX"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:gravity="center" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- ================= RESULT SCREEN ================= -->
+    <LinearLayout
+        android:id="@+id/layout_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎉"
+            android:textSize="64sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/win_title"
+            android:textColor="@color/accent_green"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <!-- Message Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/win_message"
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp" />
+        </LinearLayout>
+
+        <!-- Play again / Restart -->
+        <android.widget.Button
+            android:id="@+id/btn_restart"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/button_available"
+            android:text="@string/btn_restart"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:elevation="4dp" />
+
+        <!-- Back to Menu -->
+        <android.widget.Button
+            android:id="@+id/btn_back_to_menu"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_unavailable"
+            android:text="@string/btn_menu"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:elevation="0dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Premium Dark Theme Palette -->
+    <color name="bg_dark">#121824</color>
+    <color name="card_dark">#1E293B</color>
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#94A3B8</color>
+    
+    <!-- Neon / Emerald Green Accents for Active Doors -->
+    <color name="accent_green">#2ECC71</color>
+    <color name="accent_green_glow">#202ECC71</color> <!-- 12% opacity emerald for border glow -->
+    <color name="accent_green_dark">#27AE60</color>
+    
+    <!-- Muted Slate Grays for Locked/Disabled Exits -->
+    <color name="disabled_gray">#334155</color>
+    <color name="disabled_text">#64748B</color>
+    
+    <!-- Win/Exit Accents -->
+    <color name="accent_blue">#3B82F6</color>
+    <color name="accent_gold">#F59E0B</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
