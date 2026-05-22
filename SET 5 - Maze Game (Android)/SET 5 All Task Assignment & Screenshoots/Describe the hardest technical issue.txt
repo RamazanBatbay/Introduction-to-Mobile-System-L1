@@ -1,0 +1,3 @@
+- Describe the hardest technical issue you faced and how you solved it.
+
+The biggest technical challenge I faced was keeping the state consistent across the domain model, especially while trying to combine complex car parking functionality (e.g., bitwise fuel operations) with XML-based data storage. To overcome this challenge, I devised a robust object-oriented design based on the use of abstract classes and interfaces. This helped me decouple the car operations from data storage and handle multi-factor sorting consistently.
